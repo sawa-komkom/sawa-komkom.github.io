@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <script>
+        function g(variable) {
+          var query = window.location.search.substring(1);
+          var vars = query.split('&');
+          for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (pair[0] == variable) {
+              return pair[1];
+            }
+          }
+          return false;
+        }
+        function i() {
+          return g('is_open_sptu') && g('sptu_opened');
+        }
+        function s() {
+          if (i()) {
+            document.documentElement.classList.add('-sptu');
+          }
+        }
+        s();
+      </script>
+      
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport-config" />
+    <title>Sawa quiz</title>
+    
+      <script>
+        void function() {
+          function insertScript(src) {
+            const script = document.createElement('script')
+            script.type = 'module'
+            script.crossOrigin = 'anonymous'
+            script.src = src
+            document.head.appendChild(script)
+          }
+
+          const url = window.i() ? './assets/index-Dw3JaV-v-sptu.js' : './assets/index-Dw3JaV-v.js'
+          insertScript(url)
+        }()
+      </script>
+    
+    <link rel="stylesheet" crossorigin href="./assets/index-33qWIfWk.css">
+    <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();if(location.protocol!="file:"){window.__vite_is_modern_browser=true}</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body id="body">
+    <div id="app"></div>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-BqDmRqJs.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-CbDZ_Oje.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
